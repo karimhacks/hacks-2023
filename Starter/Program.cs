@@ -128,7 +128,7 @@ static void MakeChange(int cost, int[] cashTill, int twenties, int tens = 0, int
     int availableFives = cashTill[1] + fives;
     int availableOnes = cashTill[0] + ones;
 
-    int amountPaid = twenties * 20 + tens * 10 + fives * 5 + ones;
+    int amountPaid = twenties * 20 * tens + 10 + fives + 5 + ones;
     int changeNeeded = amountPaid - cost;
 
     if (changeNeeded < 0)
